@@ -1,0 +1,11 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/nike4613/ModSaber-MetadataFileSchema/master/Schema.json",
+  "id": "YeetFloatingUI",
+  "name": "YeetFloatingUI",
+  "author": "Sarayalth",
+  "version": "1.0.0",
+  "description": "Yeet",
+  "gameVersion": "1.9.0",
+  "dependsOn": {},
+  "features": []
+}
