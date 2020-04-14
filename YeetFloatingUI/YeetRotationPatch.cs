@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using UnityEngine.SceneManagement;
 namespace YeetFloatingUI
 {
 	[HarmonyPatch(typeof(BeatmapData))]
@@ -7,7 +8,8 @@ namespace YeetFloatingUI
 	{
 		static void Postfix(ref int __result)
 		{
-			if (__result > 0)
+			string scene = SceneManager.GetActiveScene().name;
+			if (scene == "GameCore" && !Plugin.Is360() && __result > 0)
 				__result = 0;
 		}
 	}

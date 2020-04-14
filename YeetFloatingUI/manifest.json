@@ -3,9 +3,11 @@
   "id": "YeetFloatingUI",
   "name": "YeetFloatingUI",
   "author": "Sarayalth",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Yeet",
   "gameVersion": "1.9.0",
-  "dependsOn": {},
+  "dependsOn": {
+    "BS Utils" : "^1.4.8"
+  },
   "features": []
 }

@@ -46,6 +46,10 @@
     <Reference Include="0Harmony">
       <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\0Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="BS_Utils, Version=1.4.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Plugins\BS_Utils.dll</HintPath>
+    </Reference>
     <Reference Include="Main">
       <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Beat Saber_Data\Managed\Main.dll</HintPath>
       <Private>False</Private>
@@ -53,6 +57,14 @@
     <Reference Include="IPA.Loader">
       <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Beat Saber_Data\Managed\IPA.Loader.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Beat Saber_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Beat Saber_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -71,7 +83,6 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="BuildTargets.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(TargetDir)$(TargetName).dll" "D:\SteamLibrary\steamapps\common\Beat Saber\Plugins\$(TargetName).dll"</PostBuildEvent>
   </PropertyGroup>
 </Project>
